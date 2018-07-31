@@ -11,8 +11,8 @@
 
     export class HeroesComponent implements OnInit {
 	  
-	  arrHeroes: '';      //Hero[]; 
-      selectedHero: '' ; //Hero
+	  arrHeroes= [] ;      //Hero[]; 
+      //selectedHero: '' ; //Hero
 	 
       constructor(private heroService: HeroService) { }
      
@@ -20,9 +20,9 @@
 		this.getHeroes();  
       }
      
-	  onSelect(selHero) {
-	    this.selectedHero = selHero;
-	  }
+	  //onSelect(selHero) {
+	  //  this.selectedHero = selHero;
+	  //}
 	  
 	  getHeroes(){
 	    this.heroService.getHeroes()
