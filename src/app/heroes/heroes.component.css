@@ -3,7 +3,7 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 20em;
 }
 .heroes li {
   position: relative;
@@ -25,7 +25,7 @@
   color: #888;
   text-decoration: none;
   position: relative;
-  display: block;
+  display: inline-block;;
   width: 250px;
 }
 

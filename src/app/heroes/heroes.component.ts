@@ -28,4 +28,19 @@
 	    this.heroService.getHeroes()
 		 .subscribe(heros => this.arrHeroes = heros );
 	  }
+	  
+	  add(name: string): void {
+		 name = name.trim();
+		 if (!name) { return; }
+		 this.heroService.addHero({ name } as Hero)
+			.subscribe(hero => {
+				this.arrHeroes.push(hero);
+			});
+	  }
+	  
+	  delete(hero: Hero): void {
+		  this.arrHeroes = this.arrHeroes.filter(h => h !== hero); 
+		  this.heroService.deleteHero(hero).subscribe();
+	  }
+
     }
